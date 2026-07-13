@@ -70,3 +70,85 @@ body{font-size:16px;line-height:1.6}
   .nda-spotlight p:not(.eyebrow){font-size:15px}
   .nda-spotlight a{flex:1;padding-inline:10px;font-size:10px}
 }
+/* Compact, touch-first homepage layout */
+@media(max-width:767px){
+  .hero{min-height:530px}
+  .hero>.shell{min-height:530px!important;padding-bottom:50px!important}
+  .hero h1{font-size:36px!important}
+  .hero+div.shell>div{box-shadow:0 12px 32px rgba(33,27,79,.16)}
+  .quick{min-height:78px!important}
+
+  .visual-discovery{margin-top:16px;padding-top:46px}
+  .visual-discovery>.shell:first-of-type{gap:20px}
+  .visual-copy h2{font-size:28px}
+  .visual-copy>p:not(.eyebrow){display:none}
+  .visual-copy>a{margin-top:18px}
+  .visual-mosaic{display:block;height:210px}
+  .visual-mosaic figure:not(.visual-main){display:none}
+  .visual-mosaic .visual-main{height:210px}
+  .programme-rail{display:flex!important;width:calc(100% - 28px)!important;margin-top:18px!important;overflow-x:auto;scroll-snap-type:x mandatory;box-shadow:none;scrollbar-width:none}
+  .programme-rail::-webkit-scrollbar{display:none}
+  .programme-rail>a{flex:0 0 128px;min-height:82px;scroll-snap-align:start}
+  .visual-discovery+.home-about{padding-top:44px!important}
+
+  .home-about.section,.home-institutions.section,.home-programmes.section,.why-choose-light.section,.home-facilities.section,.home-updates.section,.home-gallery.section,.home-testimonials.section{padding-top:44px!important;padding-bottom:44px!important}
+  .home-about .shell{gap:38px!important}
+  .home-about .shell>div:first-child>img{height:238px!important}
+  .home-about .shell>div:first-child>div{left:10px;right:10px;bottom:-16px;padding:11px;text-align:center}
+  .about-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+  .about-feature-grid .feature{min-height:84px;align-items:flex-start;flex-direction:column;justify-content:center;gap:7px;padding:11px;font-size:12px;line-height:1.35}
+  .about-feature-grid .feature svg{width:19px;height:19px}
+  .home-about .mt-7{margin-top:20px}
+
+  .home-institutions .mb-8>p:last-child,.home-programmes .mb-8>p:last-child{display:none}
+  .institution-rail,.course-rail,.why-feature-rail{display:flex!important;gap:13px!important;margin-right:-14px;margin-left:-14px;padding:2px 14px 14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:14px;scrollbar-width:none}
+  .institution-rail::-webkit-scrollbar,.course-rail::-webkit-scrollbar,.why-feature-rail::-webkit-scrollbar{display:none}
+  .institution-rail>.card,.course-rail>.card{flex:0 0 min(82vw,320px);scroll-snap-align:start}
+  .institution-rail .card .h-48{height:160px}
+  .institution-rail .card p{min-height:0}
+  .course-rail{margin-top:18px}
+  .course-rail>.card{min-height:300px}
+  .filterbar{margin-right:-14px;margin-left:-14px;padding-inline:14px}
+
+  .nda-spotlight{min-height:520px}
+  .nda-spotlight .shell>div{padding:210px 0 46px}
+  .nda-spotlight h2{font-size:30px}
+  .nda-spotlight p:not(.eyebrow){font-size:14px;line-height:1.65}
+
+  .why-choose-light>.shell{gap:24px!important}
+  .why-choose-light>.shell>div:first-child{padding-bottom:0}
+  .why-choose-light .mb-8{margin-bottom:20px}
+  .why-feature-rail{margin-top:2px}
+  .why-feature-rail>.darkfeature{flex:0 0 72vw;min-height:150px;scroll-snap-align:start}
+
+  .home-facilities .flex.overflow-x-auto{margin-right:-14px;margin-left:-14px;padding-right:14px;padding-left:14px;scroll-snap-type:x mandatory}
+  .home-facilities .facility{min-width:72vw;scroll-snap-align:start}
+
+  .home-impact{padding:46px 0}
+  .home-impact>.shell{gap:22px}
+  .impact-intro p:last-child{display:none}
+  .impact-grid{display:flex;margin-right:-14px;overflow-x:auto;border:0;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .impact-grid::-webkit-scrollbar{display:none}
+  .impact-grid article{flex:0 0 62vw;min-height:112px;border:1px solid rgba(255,255,255,.13);scroll-snap-align:start}
+
+  .home-updates>.shell{gap:30px!important}
+  .home-updates>.shell>div:first-child .mb-8{margin-bottom:18px}
+  .home-updates .leadership-mark{width:66px;height:96px!important}
+  .home-updates .space-y-3>a:nth-child(n+3){display:none}
+
+  .home-gallery .gallerygrid button:nth-child(n+4){display:none}
+  .home-gallery .gallerygrid{grid-auto-rows:150px!important}
+  .home-gallery .mt-8{margin-top:22px}
+  .home-testimonials .mb-8{margin-bottom:20px}
+  .home-testimonials .max-w-3xl{padding:22px}
+  .home-testimonials .max-w-3xl>p{margin-top:12px;font-size:17px;line-height:1.55}
+
+  .home-final-cta{padding-top:38px!important;padding-bottom:38px!important}
+  .home-final-cta>.shell{gap:20px}
+  .home-final-cta h2{font-size:28px}
+  .home-final-cta .flex{width:100%}
+  .home-final-cta .flex>a{flex:1}
+
+  .premium-footer .footer-grid{grid-template-columns:1fr;padding-top:38px;padding-bottom:36px}
+  .premium-footer .footer-grid>div:nth-child(2),.premium-footer .footer-grid>div:nth-child(3),.premium-footer .footer-grid>div:nth-child(4){display:none}
+}
