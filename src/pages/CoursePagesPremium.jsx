@@ -1,10 +1,11 @@
-﻿import{useMemo,useState}from'react';import{Link,useParams}from'react-router-dom';import{ArrowRight,BookOpen,CheckCircle2,ChevronRight,Clock,Download,GraduationCap,MapPin,Microscope,Search,ShieldCheck,Stethoscope,Users,CalendarDays,Building2}from'lucide-react';import{courses,courseGroups}from'../data/coursesPremium';import{FAQ}from'../components/UI';
+import{useMemo,useState}from'react';import{Link,useParams}from'react-router-dom';import{ArrowRight,BookOpen,CheckCircle2,ChevronRight,Clock,Download,GraduationCap,MapPin,Microscope,Search,ShieldCheck,Stethoscope,Users,CalendarDays,Building2}from'lucide-react';import{courses,courseGroups}from'../data/coursesPremium';import{FAQ}from'../components/UI';
 const categoryVisuals={
  Nursing:{hero:'/assets/images/nursing-hero.jpg',detail:'/assets/images/nursing-detail.jpg'},
  Pharmacy:{hero:'/assets/images/pharmacy-hero.jpg',detail:'/assets/images/pharmacy-detail.jpg'},
  Paramedical:{hero:'/assets/images/paramedical-hero.jpg',detail:'/assets/images/paramedical-detail.jpg'},
  Ayurveda:{hero:'/assets/images/ayurveda-hero.jpg',detail:'/assets/images/ayurveda-detail.jpg'},
  School:{hero:'/assets/images/school-hero.jpg',detail:'/assets/images/school-detail.jpg'},
+ 'NDA Training':{hero:'/assets/images/nda-training.webp',detail:'/assets/images/nda-training.webp'},
  'Certificate Courses':{hero:'/assets/images/pharmacy-detail.jpg',detail:'/assets/images/paramedical-detail.jpg'}
 };
 const Visual=({category,type='hero'})=>categoryVisuals[category]?.[type]||categoryVisuals.Paramedical[type];
