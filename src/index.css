@@ -1,0 +1,106 @@
+﻿@tailwind base;@tailwind components;@tailwind utilities;
+@layer base{*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{@apply m-0 bg-white font-sans text-ink antialiased}
+button,a{@apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2}
+img{display:block}
+label span{@apply mb-1.5 block text-xs font-semibold text-ink}
+select,input,textarea{font:inherit}
+}
+
+@layer components{
+.shell{width:min(1180px,calc(100% - 32px));margin-inline:auto}
+.section{@apply py-16 md:py-20}
+.heading{@apply mt-2 font-serif text-3xl leading-tight text-deepnavy md:text-4xl}
+.eyebrow{@apply text-[11px] font-bold uppercase tracking-[.18em] text-maroon}
+.subheading{@apply mb-3 mt-8 font-serif text-2xl text-deepnavy}
+.prosecopy{@apply mb-4 text-[15px] leading-7 text-muted}
+
+.btn-primary,.btn-secondary,.btn-light,.btn-gold{@apply inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-5 text-center text-xs font-bold uppercase tracking-wide transition}
+.btn-primary{@apply bg-maroon text-white hover:bg-deepmaroon}
+.btn-secondary{@apply border border-maroon bg-white text-maroon hover:bg-maroon hover:text-white}
+.btn-light{@apply border border-white/60 bg-white/10 text-white hover:bg-white hover:text-deepnavy}
+.btn-gold{@apply bg-gold text-deepnavy hover:bg-[#e0b548]}
+.iconbtn{@apply grid h-11 w-11 place-items-center rounded-md hover:bg-soft}
+.navlink{@apply relative flex items-center gap-1 py-8 text-[10px] font-bold uppercase text-ink transition hover:text-maroon}
+.navlink:after{@apply absolute bottom-5 left-0 h-0.5 w-0 bg-maroon transition-all content-none}
+.navlink:hover:after,.navlink.active:after{@apply w-full}
+.mobilemenu{@apply absolute left-0 top-full z-50 max-h-[calc(100vh-120px)] w-full overflow-auto border-t border-line bg-white px-5 py-3 shadow-soft}
+.mobilemenu a{@apply flex items-center justify-between border-b border-line py-3 text-sm font-semibold}
+.ticker{animation:ticker 24s linear infinite}
+.hero{@apply relative isolate min-h-[610px] overflow-hidden bg-deepnavy}
+.hero>img{@apply absolute inset-0 -z-20 h-full w-full object-cover transition}
+.herooverlay{@apply absolute inset-0 -z-10 bg-gradient-to-r from-deepnavy/95 via-deepnavy/75 to-deepnavy/30}
+.heronav{@apply grid h-9 w-9 place-items-center rounded-full border border-white/30 hover:bg-white/15}
+.quick{@apply flex min-h-28 flex-col items-center justify-center gap-3 border-b border-r border-line p-3 text-center text-xs font-semibold text-deepnavy transition hover:-translate-y-1 hover:text-maroon}
+.quick svg{@apply text-maroon}
+.card{@apply overflow-hidden rounded-xl border border-line bg-white shadow-[0_4px_18px_rgba(33,27,79,.05)] transition hover:-translate-y-1 hover:shadow-soft}
+.tag{@apply rounded bg-[#F4E4B8] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-deepmaroon}
+.textlink{@apply inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide text-maroon hover:text-deepmaroon}
+.feature{@apply flex items-center gap-3 rounded-lg border border-line p-4 text-sm font-semibold}
+.feature svg{@apply text-maroon}
+.darkfeature{@apply flex min-h-40 flex-col rounded-lg border border-white/10 bg-white/5 p-5}
+.darkfeature svg{@apply mb-5 text-gold}
+.darkfeature small{@apply mt-2 leading-5 text-white/55}
+.facility{@apply min-w-60 overflow-hidden rounded-lg border border-line bg-white}
+.facility img{@apply h-40 w-full object-cover}
+.facility b{@apply block p-4 font-serif text-lg text-deepnavy}
+.field{@apply min-h-11 w-full rounded-md border border-line bg-white px-3 text-sm outline-none transition placeholder:text-muted/60 focus:border-maroon focus:ring-1 focus:ring-maroon}
+.filterbar{@apply flex flex-wrap justify-center gap-2}
+.filterbar button{@apply rounded-full border border-line bg-white px-4 py-2 text-xs font-semibold transition hover:border-maroon hover:text-maroon}
+.filterbar button.active{@apply border-maroon bg-maroon text-white}
+.infocard{@apply rounded-xl border border-line bg-white p-6}
+.infocard h3{@apply font-serif text-xl text-deepnavy}
+.infocard p{@apply mt-2 text-sm leading-6 text-muted}
+.newsrow{@apply grid grid-cols-[100px_1fr_auto] items-center gap-3 rounded-lg border border-line bg-white p-4 text-sm}
+.newsrow span{@apply text-xs text-muted}
+.gallerygrid{@apply grid auto-rows-[210px] gap-4 sm:grid-cols-2 lg:grid-cols-3}
+.gallerygrid button:nth-child(1),.gallerygrid button:nth-child(5){@apply sm:row-span-2}
+.gallerygrid img{@apply h-full w-full object-cover transition duration-500 group-hover:scale-105}
+.gallerygrid span{@apply absolute inset-x-0 bottom-0 bg-deepnavy/80 p-4 text-left text-sm font-semibold text-white}
+.steps{@apply grid gap-4 md:grid-cols-5}
+.steps div{@apply relative flex items-center gap-3 rounded-lg border border-line bg-white p-4 md:flex-col md:text-center}
+.steps b{@apply grid h-10 w-10 shrink-0 place-items-center rounded-full bg-maroon text-white}
+.steps span{@apply text-sm font-semibold}
+.check{@apply my-3 flex gap-3 text-sm text-muted}
+.check svg{@apply h-5 w-5 shrink-0 text-maroon}
+.modal{@apply fixed inset-0 z-[80] grid place-items-center bg-deepnavy/85 p-4}
+.modalbox{@apply w-full max-w-xl rounded-xl bg-white p-6 shadow-2xl}
+.floating{@apply grid h-12 w-12 place-items-center rounded-full text-white shadow-lg transition hover:-translate-y-1}
+.mobile-actions{@apply fixed inset-x-0 bottom-0 z-30 hidden h-14 grid-cols-3 bg-white shadow-[0_-5px_20px_rgba(0,0,0,.12)]}
+.mobile-actions a{@apply flex items-center justify-center gap-2 text-xs font-bold uppercase}
+.applystep{@apply flex w-full items-center gap-3 rounded-lg border border-line p-3 text-left text-sm font-semibold}
+.applystep b{@apply grid h-8 w-8 place-items-center rounded-full bg-soft text-maroon}
+.applystep.active{@apply border-maroon bg-cream text-maroon}
+.applystep.active b{@apply bg-maroon text-white}
+.checkline{@apply flex min-h-14 items-center gap-3 rounded-lg border border-line p-4 text-sm}
+.empty{@apply rounded-xl border border-dashed border-line bg-soft p-12 text-center text-muted}
+.timeline{@apply grid border-l-2 border-gold md:grid-cols-4 md:border-l-0 md:border-t-2}
+.timeline div{@apply relative p-5}
+.timeline b{@apply text-gold}
+.timeline p{@apply mt-2 text-sm text-muted}
+
+}
+
+@keyframes ticker{from{transform:translateX(10%)}
+to{transform:translateX(-80%)}
+}
+
+@media(max-width:767px){.section{@apply py-12}
+.mobile-actions{@apply grid}
+body{@apply pb-14}
+.heading{@apply text-[28px]}
+.hero{min-height:570px}
+.hero h1{@apply text-[42px]}
+.gallerygrid{@apply auto-rows-[230px]}
+.newsrow{@apply grid-cols-[1fr_auto]}
+.newsrow span{@apply col-span-2}
+.floating{@apply hidden}
+}
+
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
+
+
+

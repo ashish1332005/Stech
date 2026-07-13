@@ -1,0 +1,21 @@
+/* Dark-section contrast and image treatment */
+section.bg-deepnavy.text-white{position:relative;isolation:isolate;background-color:#211b4f;background-image:linear-gradient(90deg,rgba(33,27,79,.78) 0%,rgba(33,27,79,.94) 42%,#211b4f 60%),url('/assets/images/nursing-detail.jpg');background-position:left center;background-size:58% 100%,48% 100%;background-repeat:no-repeat}
+section.bg-deepnavy.text-white:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(33,27,79,.04),rgba(33,27,79,.18))}
+section.bg-deepnavy.text-white .heading{color:#fff!important}
+section.bg-deepnavy.text-white .eyebrow{color:#d5a534!important}
+section.bg-deepnavy.text-white .text-muted{color:rgba(255,255,255,.68)!important}
+section.bg-deepnavy.text-white>.shell>div:first-child{padding:46px 34px 46px 0}
+
+/* Keep the programme-navigation rail inside its own section */
+.visual-discovery{overflow:visible!important;padding-bottom:0!important}
+.programme-rail{transform:none!important;margin-top:54px!important;margin-bottom:0!important}
+.visual-discovery+.section{padding-top:92px!important}
+
+/* Use the supplied crest as a prominent navigation asset */
+.premium-header .brand-logo{width:64px;height:70px}
+.premium-header .brand{min-width:244px}
+.premium-header .brand>span:last-child b{font-size:20px}
+.drawer-head .brand-logo{width:52px;height:58px}
+
+@media(max-width:900px){section.bg-deepnavy.text-white{background-image:linear-gradient(180deg,rgba(33,27,79,.68),#211b4f 44%),url('/assets/images/nursing-detail.jpg');background-size:100% 48%,100% 48%;background-position:top center;background-repeat:no-repeat}section.bg-deepnavy.text-white>.shell>div:first-child{padding:145px 0 24px}.programme-rail{margin-top:36px!important}.visual-discovery+.section{padding-top:78px!important}}
+@media(max-width:767px){.premium-header .brand-logo{width:46px;height:53px}.premium-header .brand{min-width:0}.premium-header .brand>span:last-child b{font-size:14px}.programme-rail{margin-top:30px!important}.visual-discovery+.section{padding-top:70px!important}section.bg-deepnavy.text-white>.shell>div:first-child{padding-top:125px}.darkfeature{min-height:142px}}

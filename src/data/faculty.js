@@ -1,0 +1,2 @@
+﻿export const faculty=[['Nursing Faculty Team','Academic leadership','Nursing'],['Pharmacy Faculty Team','Teaching and laboratory team','Pharmacy'],['Paramedical Faculty Team','Teaching and skills team','Paramedical'],['School Academic Team','Teaching and student development','School']].map((x,i)=>({id:i+1,name:x[0],designation:x[1],department:x[2],qualification:'Individual profiles available after verification',experience:'Department faculty information'}));
+
