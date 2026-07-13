@@ -19,3 +19,40 @@ section.bg-deepnavy.text-white>.shell>div:first-child{padding:46px 34px 46px 0}
 
 @media(max-width:900px){section.bg-deepnavy.text-white{background-image:linear-gradient(180deg,rgba(33,27,79,.68),#211b4f 44%),url('/assets/images/nursing-detail.jpg');background-size:100% 48%,100% 48%;background-position:top center;background-repeat:no-repeat}section.bg-deepnavy.text-white>.shell>div:first-child{padding:145px 0 24px}.programme-rail{margin-top:36px!important}.visual-discovery+.section{padding-top:78px!important}}
 @media(max-width:767px){.premium-header .brand-logo{width:46px;height:53px}.premium-header .brand{min-width:0}.premium-header .brand>span:last-child b{font-size:14px}.programme-rail{margin-top:30px!important}.visual-discovery+.section{padding-top:70px!important}section.bg-deepnavy.text-white>.shell>div:first-child{padding-top:125px}.darkfeature{min-height:142px}}
+/* Readable type scale across navigation, programme cards and supporting copy */
+body{font-size:16px;line-height:1.6}
+.topbar>.shell,.premium-ticker b,.premium-ticker .ticker{font-size:12px}
+.brand>span:last-child small{font-size:10px}
+.desktopnav>a,.desktopnav>button,.header-actions .enquire,.header-actions .apply{font-size:11px}
+.footer-grid>div:not(:first-child) a,.footer-grid p{font-size:13px}
+.course-card-image>span,.course-card-body>p,.course-hero-content>span,.course-facts small{font-size:10px}
+.course-institution,.course-card-meta,.course-card-actions a,.course-anchor-nav a,.course-hero-content>div a{font-size:11px}
+.course-section>p:not(.eyebrow),.course-hero-content>p{font-size:15px}
+.curriculum-section article p,.facility-highlights p,.course-admission-aside span{font-size:13px}
+.course-admission-aside p,.course-admission-aside a,.course-admission-aside small{font-size:11px}
+
+.nda-spotlight{position:relative;isolation:isolate;min-height:540px;display:flex;align-items:center;overflow:hidden;background:#211b4f;color:#fff}
+.nda-spotlight>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.nda-spotlight-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(24,19,60,.96) 0%,rgba(24,19,60,.82) 43%,rgba(24,19,60,.12) 78%)}
+.nda-spotlight .shell>div{max-width:650px;padding:84px 0}
+.nda-spotlight .eyebrow{color:#f4d783}
+.nda-spotlight h2{margin-top:12px;font-family:'Playfair Display';font-size:44px;line-height:1.12;text-wrap:balance}
+.nda-spotlight p:not(.eyebrow){max-width:590px;margin-top:18px;color:rgba(255,255,255,.78);font-size:16px;line-height:1.75}
+.nda-spotlight .shell>div>div{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
+.nda-spotlight a{display:inline-flex;min-height:46px;align-items:center;justify-content:center;gap:8px;padding:0 18px;border:1px solid rgba(255,255,255,.55);font-size:11px;font-weight:800;text-transform:uppercase}
+.nda-spotlight a:first-child{border-color:#8f2028;background:#8f2028}
+.nda-spotlight svg{width:16px}
+
+@media(max-width:767px){
+  .topbar>.shell,.premium-ticker b,.premium-ticker .ticker{font-size:11px}
+  .course-institution,.course-card-meta,.course-card-actions a{font-size:10px}
+  .course-card-image>span{font-size:9px}
+  .course-section>p:not(.eyebrow),.course-hero-content>p{font-size:14px}
+  .nda-spotlight{min-height:610px;align-items:flex-end}
+  .nda-spotlight>img{object-position:58% center}
+  .nda-spotlight-shade{background:linear-gradient(180deg,rgba(33,27,79,.12),rgba(33,27,79,.96) 60%,#211b4f)}
+  .nda-spotlight .shell>div{padding:250px 0 58px}
+  .nda-spotlight h2{font-size:34px}
+  .nda-spotlight p:not(.eyebrow){font-size:15px}
+  .nda-spotlight a{flex:1;padding-inline:10px;font-size:10px}
+}
